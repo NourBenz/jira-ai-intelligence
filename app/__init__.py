@@ -1,0 +1,1 @@
+"""Jira AI Intelligence Application"""

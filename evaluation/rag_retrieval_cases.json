@@ -1,0 +1,37 @@
+[
+  {
+    "id": "hallucinated-ticket",
+    "project_key": "T1",
+    "query": "The AI invents Jira issues that do not exist",
+    "relevant_issue_keys": ["T1-22"],
+    "top_k": 10
+  },
+  {
+    "id": "jira-authentication",
+    "project_key": "T1",
+    "query": "Which issue sets up authentication for the Jira REST API?",
+    "relevant_issue_keys": ["T1-12"],
+    "top_k": 5
+  },
+  {
+    "id": "api-pagination",
+    "project_key": "T1",
+    "query": "Find the task about fixing Jira API pagination",
+    "relevant_issue_keys": ["T1-25"],
+    "top_k": 5
+  },
+  {
+    "id": "sprint-completion",
+    "project_key": "T1",
+    "query": "Which issue calculates the sprint completion rate?",
+    "relevant_issue_keys": ["T1-15"],
+    "top_k": 5
+  },
+  {
+    "id": "workload-distribution",
+    "project_key": "T1",
+    "query": "Which issue covers workload distribution per team member?",
+    "relevant_issue_keys": ["T1-28"],
+    "top_k": 5
+  }
+]

@@ -1,0 +1,43 @@
+<!-- Displays immediate startup feedback while Electron verifies the company service. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; img-src 'self'"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Checking connection - Jira AI Intelligence</title>
+    <link rel="stylesheet" href="./network-required.css" />
+  </head>
+
+  <body>
+    <main class="connection-page">
+      <section class="connection-card" aria-labelledby="checking-title">
+        <div class="status-icon status-icon--checking" aria-hidden="true">
+          <span class="spinner"></span>
+        </div>
+        <p class="eyebrow eyebrow--checking">Secure startup</p>
+        <h1 id="checking-title">Checking company connection</h1>
+        <p class="description">
+          Jira AI Intelligence is verifying that the protected company service
+          is available.
+        </p>
+        <div
+          class="connection-status connection-status--checking"
+          role="status"
+          aria-live="polite"
+        >
+          This usually takes only a few seconds.
+        </div>
+        <p class="security-note">
+          The workspace will open automatically when the service responds.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

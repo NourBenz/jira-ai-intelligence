@@ -1,0 +1,31 @@
+{
+  "name": "jira-ai-intelligence-desktop",
+  "productName": "Jira AI Intelligence",
+  "version": "1.0.4",
+  "description": "Secure desktop client for Jira AI Intelligence",
+  "main": "src/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "check": "node --check src/main.cjs && node --check src/preload.cjs && node --check src/network-required.js && node --check src/runtime-config.cjs && node --check forge.config.js",
+    "test": "node --test test/*.test.cjs"
+  },
+  "keywords": [
+    "jira",
+    "intelligence",
+    "electron"
+  ],
+  "author": "Nour B",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@electron-forge/cli": "7.11.2",
+    "@electron-forge/maker-squirrel": "7.11.2",
+    "electron": "43.3.0"
+  },
+  "overrides": {
+    "tar": "7.5.22",
+    "tmp": "0.2.7"
+  }
+}

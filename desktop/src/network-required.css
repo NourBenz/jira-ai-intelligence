@@ -1,0 +1,157 @@
+/* Styles the protected network-required desktop state. */
+
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #102342;
+  background: #f3f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.connection-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(70, 119, 238, 0.12), transparent 34%),
+    #f3f6fb;
+}
+
+.connection-card {
+  width: min(100%, 540px);
+  padding: 48px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #d9e2f0;
+  border-radius: 26px;
+  box-shadow: 0 24px 65px rgba(22, 46, 87, 0.12);
+}
+
+.status-icon {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+  color: #ffffff;
+  background: #d94a57;
+  border-radius: 22px;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.status-icon--checking {
+  background: linear-gradient(135deg, #3e7af0, #6759e8);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 4px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #d13f4d;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow--checking {
+  color: #456ee6;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.1;
+}
+
+.description {
+  margin: 20px auto 0;
+  max-width: 430px;
+  color: #60708d;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.connection-status {
+  margin: 28px 0 18px;
+  padding: 14px 18px;
+  color: #9b2f3a;
+  background: #fff0f2;
+  border: 1px solid #ffd2d7;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.connection-status--checking {
+  color: #3556b8;
+  background: #eef4ff;
+  border-color: #cfddff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}
+
+#retry-button {
+  width: 100%;
+  padding: 15px 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3e7af0, #5667e6);
+  border: 0;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(62, 122, 240, 0.25);
+}
+
+#retry-button:hover {
+  filter: brightness(1.05);
+}
+
+#retry-button:focus-visible {
+  outline: 3px solid rgba(62, 122, 240, 0.35);
+  outline-offset: 3px;
+}
+
+#retry-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.security-note {
+  margin: 22px 0 0;
+  color: #8190aa;
+  font-size: 12px;
+  line-height: 1.5;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Network required — Jira AI Intelligence</title>
+
+    <link rel="stylesheet" href="./network-required.css" />
+    <script src="./network-required.js" defer></script>
+  </head>
+
+  <body>
+    <main class="connection-page">
+      <section class="connection-card">
+        <div class="status-icon" aria-hidden="true">!</div>
+
+        <p class="eyebrow">Connection unavailable</p>
+
+        <h1>Company network required</h1>
+
+        <p class="description">
+          Jira AI Intelligence cannot reach the company service. Connect to the
+          company network or VPN, then try again.
+        </p>
+
+        <div
+          id="connection-status"
+          class="connection-status"
+          role="status"
+          aria-live="polite"
+        >
+          The application is currently offline.
+        </div>
+
+        <button id="retry-button" type="button">
+          Retry connection
+        </button>
+
+        <p class="security-note">
+          Jira credentials and company information are not stored on this
+          device.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
